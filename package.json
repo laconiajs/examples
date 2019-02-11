@@ -1,0 +1,25 @@
+{
+  "name": "laconia-examples",
+  "version": "0.0.1",
+  "description": "Examples of laconia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laconiajs/examples.git"
+  },
+  "keywords": [
+    "laconia"
+  ],
+  "author": "Wisen Tanasa <wisen@ceilfors.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laconiajs/examples/issues"
+  },
+  "homepage": "https://github.com/laconiajs/examples#readme",
+  "devDependencies": {
+    "lerna": "^3.11.0"
+  }
+}
