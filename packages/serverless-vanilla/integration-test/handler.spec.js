@@ -8,9 +8,9 @@ describe("handler", () => {
       "laconia-examples-serverless-vanilla"
     );
     const response = await request(baseUrl)
-      .get("/hello?message=hello")
+      .get("/uppercase?value=hello")
       .expect("Content-Type", /json/)
       .expect(200);
-    expect(response.body.message).toEqual("HELLO");
+    expect(response.body.value).toEqual("HELLO");
   });
 });

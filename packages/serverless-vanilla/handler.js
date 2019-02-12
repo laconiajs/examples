@@ -2,11 +2,11 @@ const laconia = require("@laconia/core");
 const api = require("@laconia/adapter-api").apigateway({ inputType: "params" });
 
 const instances = () => ({
-  operate: input => input.toUpperCase()
+  upperCase: input => input.toUpperCase()
 });
 
-const app = async ({ message }, { operate }) => {
-  return { message: operate(message) };
+const app = async ({ value }, { upperCase }) => {
+  return { value: await upperCase(value) };
 };
 
 exports.handler = laconia(api(app)).register(instances);

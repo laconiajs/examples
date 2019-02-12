@@ -6,7 +6,7 @@ provider:
   region: eu-west-1
 
 functions:
-  hello:
+  uppercase:
     handler: handler.handler
     events:
-      - http: GET hello
+      - http: GET uppercase
