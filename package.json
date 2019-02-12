@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/laconiajs/examples#readme",
   "devDependencies": {
-    "lerna": "^3.11.0"
+    "aws-sdk": "^2.400.0",
+    "jest": "^24.1.0",
+    "lerna": "^3.11.0",
+    "supertest": "^3.4.2"
   }
 }

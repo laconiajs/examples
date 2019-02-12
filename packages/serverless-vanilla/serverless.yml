@@ -3,7 +3,10 @@ service: laconia-examples-serverless-vanilla
 provider:
   name: aws
   runtime: nodejs8.10
+  region: eu-west-1
 
 functions:
   hello:
-    handler: handler.hello
+    handler: handler.handler
+    events:
+      - http: GET hello

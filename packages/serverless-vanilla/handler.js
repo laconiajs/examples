@@ -1,9 +1,12 @@
-module.exports.hello = async (event, context) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Go Serverless v1.0! Your function executed successfully!",
-      input: event
-    })
-  };
+const laconia = require("@laconia/core");
+const api = require("@laconia/adapter-api").apigateway({ inputType: "params" });
+
+const instances = () => ({
+  operate: input => input.toUpperCase()
+});
+
+const app = async ({ message }, { operate }) => {
+  return { message: operate(message) };
 };
+
+exports.handler = laconia(api(app)).register(instances);
