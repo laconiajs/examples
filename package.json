@@ -4,7 +4,8 @@
   "description": "Examples of laconia",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "lerna bootstrap"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,11 @@
   },
   "homepage": "https://github.com/laconiajs/examples#readme",
   "devDependencies": {
+    "@laconia/test": "^0.16.0",
     "aws-sdk": "^2.400.0",
     "jest": "^24.1.0",
     "lerna": "^3.11.0",
+    "serverless": "^1.37.1",
     "supertest": "^3.4.2"
   }
 }
