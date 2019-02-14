@@ -1,27 +1,57 @@
 const path = require("path");
 const slsw = require("serverless-webpack");
 
+// Copied and modified from: https://github.com/serverless-heaven/serverless-webpack/tree/master/examples/babel-webpack-4
 module.exports = {
   entry: slsw.lib.entries,
+  mode: slsw.lib.webpack.isLocal ? "development" : "production",
+  optimization: {
+    minimize: false
+  },
+  performance: {
+    hints: false
+  },
   target: "node",
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loaders: ["babel-loader"],
-        include: __dirname,
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader"
+          }
+        ]
       },
-      // Transpile laconia as it is written in node 8
+      // Transpile laconia
+      // babel-loader config is being specified here as babel-loader will not loader .babelrc
+      // for node_modules for some reason
       {
-        test: /\.js$/,
-        loaders: ["babel-loader"],
-        include: /node_modules\/@laconia/
+        test: /\@laconia.*\.js$/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                [
+                  "@babel/env",
+                  {
+                    targets: {
+                      node: "6.10"
+                    }
+                  }
+                ]
+              ],
+              sourceType: "script",
+              plugins: ["@babel/transform-runtime"]
+            }
+          }
+        ]
       }
     ]
   },
   output: {
-    libraryTarget: "commonjs",
+    libraryTarget: "commonjs2",
     path: path.join(__dirname, ".webpack"),
     filename: "[name].js"
   },

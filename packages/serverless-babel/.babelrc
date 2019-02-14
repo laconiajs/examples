@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/env",
       {
         "targets": {
           "node": "6.10"
@@ -9,6 +9,5 @@
       }
     ]
   ],
-  "retainLines": true,
-  "plugins": ["transform-runtime"]
+  "plugins": ["@babel/transform-runtime"]
 }
