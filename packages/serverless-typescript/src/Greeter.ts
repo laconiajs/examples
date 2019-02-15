@@ -1,0 +1,3 @@
+interface Greeter {
+  (): Promise<string>;
+}

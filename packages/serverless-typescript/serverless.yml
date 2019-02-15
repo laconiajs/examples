@@ -10,9 +10,5 @@ provider:
   region: ${opt:region, 'eu-west-1'}
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          method: get
-          path: hello
+  greet:
+    handler: src/handler.greet

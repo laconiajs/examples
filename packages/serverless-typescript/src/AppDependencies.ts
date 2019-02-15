@@ -1,0 +1,3 @@
+interface AppDependencies {
+  greeter: Greeter;
+}

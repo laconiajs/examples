@@ -4,20 +4,25 @@
   "description": "Serverless webpack example using Typescript",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "deploy": "../../node_modules/.bin/sls deploy",
+    "undeploy": "../../node_modules/.bin/sls remove"
   },
   "dependencies": {
     "@laconia/core": "^0.16.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.17",
+    "@types/jest": "^24.0.4",
     "@types/node": "^8.0.57",
-    "serverless-webpack": "^5.1.1",
-    "source-map-support": "^0.5.6",
-    "ts-loader": "^4.2.0",
-    "typescript": "^2.9.2",
+    "jest": "^24.1.0",
+    "serverless-webpack": "^5.2.0",
+    "source-map-support": "^0.5.10",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3",
     "webpack": "^4.5.0"
   },
-  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "author": "Wisen Tanasa <wisen@ceilfors.com>",
   "license": "MIT"
 }
