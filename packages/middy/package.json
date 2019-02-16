@@ -1,0 +1,32 @@
+{
+  "name": "@laconia-examples/middy",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Wisen Tanasa <wisen@ceilfors.com>",
+  "homepage": "https://github.com/laconiajs/examples/tree/master/packages/middy#readme",
+  "license": "ISC",
+  "main": "lib/middy.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laconiajs/examples.git"
+  },
+  "scripts": {
+    "test": "../../node_modules/.bin/jest",
+    "deploy": "../../node_modules/.bin/sls deploy",
+    "undeploy": "../../node_modules/.bin/sls remove"
+  },
+  "bugs": {
+    "url": "https://github.com/laconiajs/examples/issues"
+  },
+  "dependencies": {
+    "@laconia/core": "^0.16.0",
+    "middy": "^0.22.1"
+  }
+}

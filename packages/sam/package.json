@@ -1,0 +1,31 @@
+{
+  "name": "sam",
+  "version": "0.0.0",
+  "description": "Example usage of SAM and laconia",
+  "author": "Wisen Tanasa <wisen@ceilfors.com>",
+  "homepage": "https://github.com/laconiajs/examples/tree/master/packages/sam#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laconiajs/examples.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/laconiajs/examples/issues"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
+  },
+  "dependencies": {
+    "@laconia/core": "^0.16.0"
+  }
+}

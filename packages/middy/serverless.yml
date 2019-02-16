@@ -1,0 +1,11 @@
+service:
+  name: laconia-examples-middy
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: ${opt:region, 'eu-west-1'}
+
+functions:
+  exclaim:
+    handler: handler.exclaim

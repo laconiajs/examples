@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: "AWS::Serverless-2016-10-31"
+Resources:
+  greet:
+    Type: "AWS::Serverless::Function"
+    Properties:
+      Handler: handler.greet
+      FunctionName: "laconia-examples-sam-greet"
+      Runtime: nodejs8.10
+      CodeUri: .
+      MemorySize: 128

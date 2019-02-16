@@ -45,3 +45,7 @@ jspm_packages/
 
 # Webpack directories
 .webpack
+
+# AWS SAM artifacts
+packaged.yml
+awscli-bundle/
