@@ -1,3 +1,3 @@
-interface Greeter {
+export default interface Greeter {
   (): Promise<string>;
 }

@@ -1,5 +1,6 @@
 import { Handler } from "aws-lambda";
 import laconia from "@laconia/core";
+import AppDependencies from "./AppDependencies";
 import { createSimpleGreeter } from "./GreeterFactory";
 
 const instances = () => ({

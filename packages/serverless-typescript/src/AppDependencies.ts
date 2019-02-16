@@ -1,3 +1,5 @@
-interface AppDependencies {
+import Greeter from "./Greeter";
+
+export default interface AppDependencies {
   greeter: Greeter;
 }
