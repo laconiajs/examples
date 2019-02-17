@@ -1,10 +1,9 @@
 {
-  "name": "aws-nodejs-typescript",
-  "version": "1.0.0",
-  "description": "Serverless webpack example using Typescript",
-  "main": "handler.js",
+  "name": "@laconia-examples/serverless-typescript",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "../../node_modules/.bin/jest",
     "deploy": "../../node_modules/.bin/sls deploy",
     "undeploy": "../../node_modules/.bin/sls remove"
   },
@@ -13,16 +12,12 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.17",
-    "@types/jest": "^24.0.4",
     "@types/node": "^8.0.57",
-    "jest": "^24.1.0",
     "serverless-webpack": "^5.2.0",
     "source-map-support": "^0.5.10",
     "ts-jest": "^23.10.5",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3",
     "webpack": "^4.5.0"
-  },
-  "author": "Wisen Tanasa <wisen@ceilfors.com>",
-  "license": "MIT"
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "name": "@laconia-examples/sam",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@laconia/core": "^0.16.0"
+  }
+}

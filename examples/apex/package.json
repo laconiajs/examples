@@ -1,0 +1,13 @@
+{
+  "name": "@laconia-examples/apex",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "../../node_modules/.bin/jest",
+    "deploy": "apex deploy",
+    "undeploy": "apex delete"
+  },
+  "dependencies": {
+    "@laconia/core": "^0.16.0"
+  }
+}

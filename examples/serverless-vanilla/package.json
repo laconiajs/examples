@@ -1,0 +1,17 @@
+{
+  "name": "@laconia-examples/serverless-vanilla",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "../../node_modules/.bin/jest",
+    "deploy": "../../node_modules/.bin/sls deploy",
+    "undeploy": "../../node_modules/.bin/sls remove"
+  },
+  "dependencies": {
+    "@laconia/adapter-api": "^0.18.0",
+    "@laconia/core": "^0.16.0"
+  },
+  "devDependencies": {
+    "serverless": "^1.37.1"
+  }
+}

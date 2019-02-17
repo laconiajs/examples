@@ -1,9 +1,9 @@
 {
-  "name": "serverless-babel",
-  "version": "1.0.0",
-  "description": "Serverless webpack example using ecma script",
+  "name": "@laconia-examples/serverless-babel",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "../../node_modules/.bin/jest",
     "deploy": "../../node_modules/.bin/sls deploy",
     "undeploy": "../../node_modules/.bin/sls remove"
   },
@@ -13,12 +13,9 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.1",
     "babel-loader": "^8.0.5",
-    "jest": "^24.1.0",
     "serverless-webpack": "^5.2.0",
     "webpack": "^4.29.3"
   },
-  "author": "Wisen Tanasa <wisen@ceilfors.com>",
-  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.3.1",
     "@laconia/core": "^0.16.0"

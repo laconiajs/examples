@@ -1,0 +1,14 @@
+{
+  "name": "@laconia-examples/middy",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "../../node_modules/.bin/jest",
+    "deploy": "../../node_modules/.bin/sls deploy",
+    "undeploy": "../../node_modules/.bin/sls remove"
+  },
+  "dependencies": {
+    "@laconia/core": "^0.16.0",
+    "middy": "^0.22.1"
+  }
+}
