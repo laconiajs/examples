@@ -1,0 +1,13 @@
+{
+  "name": "laconia-examples-apex",
+  "description": "",
+  "runtime": "nodejs8.10",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::675728007900:role/laconia-examples-apex_lambda_function",
+  "environment": {},
+  "hooks": {
+    "clean": "rm -rf ./node_modules",
+    "build": "cp -r ../../node_modules ./"
+  }
+}
