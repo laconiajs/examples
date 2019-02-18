@@ -1,11 +1,1 @@
-# `serverless-vanilla`
-
-> TODO: description
-
-## Usage
-
-```
-const serverlessVanilla = require('serverless-vanilla');
-
-// TODO: DEMONSTRATE API
-```
+This is an example usage of laconia with serverless framework.

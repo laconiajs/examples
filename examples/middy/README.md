@@ -1,11 +1,1 @@
-# `middy`
-
-> TODO: description
-
-## Usage
-
-```
-const middy = require('middy');
-
-// TODO: DEMONSTRATE API
-```
+This is an example of how you can use laconia and middy together.
