@@ -2,6 +2,16 @@
 
 A repository containing small examples to illustrate the use of Laconia.
 
+## Running tests
+
+1. Set AWS credentials in ~/.aws/credentials
+2. Install the deployment tools under tests in your environment, some of them are not managed by NPM: aws cli, sam cli, apex
+3. Run the following command:
+
+```
+npx lerna exec -- npm run cloud-test
+```
+
 ## Included Examples
 
 - [serverless-vanilla](examples/serverless-vanilla) - Deploy laconia with serverless framework
