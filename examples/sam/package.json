@@ -5,7 +5,8 @@
   "scripts": {
     "test": "../../node_modules/.bin/jest",
     "deploy": "./install.sh",
-    "undeploy": "echo \"Error: Unsupported by SAM, go to AWS console and delete the laconia-examples-sam cloudformation stack\" && exit 1"
+    "undeploy": "aws cloudformation delete-stack --stack-name laconia-examples-sam",
+    "cloud-test": "npm run deploy && npm run test && npm run undeploy"
   },
   "dependencies": {
     "@laconia/core": "^0.16.0"

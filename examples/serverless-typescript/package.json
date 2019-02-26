@@ -5,13 +5,15 @@
   "scripts": {
     "test": "../../node_modules/.bin/jest",
     "deploy": "../../node_modules/.bin/sls deploy",
-    "undeploy": "../../node_modules/.bin/sls remove"
+    "undeploy": "../../node_modules/.bin/sls remove",
+    "cloud-test": "npm run deploy && npm run test && npm run undeploy"
   },
   "dependencies": {
     "@laconia/core": "^0.16.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.17",
+    "@types/jest": "^24.0.4",
     "@types/node": "^8.0.57",
     "serverless-webpack": "^5.2.0",
     "source-map-support": "^0.5.10",

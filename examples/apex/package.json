@@ -5,7 +5,8 @@
   "scripts": {
     "test": "../../node_modules/.bin/jest",
     "deploy": "apex deploy",
-    "undeploy": "apex delete"
+    "undeploy": "apex delete -f",
+    "cloud-test": "npm run deploy && npm run test && npm run undeploy"
   },
   "dependencies": {
     "@laconia/core": "^0.16.0"

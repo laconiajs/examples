@@ -1,29 +1,14 @@
 {
-  "name": "laconia-examples",
+  "name": "@laconia-examples/examples",
   "version": "0.0.1",
   "description": "Examples of laconia",
-  "main": "index.js",
   "scripts": {
     "clean": "npm run clean:lerna",
     "clean:lerna": "lerna clean --yes || true",
     "postinstall": "lerna bootstrap"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/laconiajs/examples.git"
-  },
-  "keywords": [
-    "laconia"
-  ],
-  "author": "Wisen Tanasa <wisen@ceilfors.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/laconiajs/examples/issues"
-  },
-  "homepage": "https://github.com/laconiajs/examples#readme",
   "devDependencies": {
     "@laconia/test": "^0.16.0",
-    "@types/jest": "^24.0.4",
     "aws-sdk": "^2.400.0",
     "jest": "^24.1.0",
     "lerna": "^3.11.0",
