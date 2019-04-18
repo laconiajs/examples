@@ -10,7 +10,9 @@ const app = async ({ message }, { exclaim }) => {
   return exclaim(message);
 };
 
-exports.exclaim = middy(laconia(app).register(instances)).use(
+const handler = laconia(app).register(instances);
+
+exports.exclaim = middy(handler).use(
   validator({
     inputSchema: {
       required: ["message"],
