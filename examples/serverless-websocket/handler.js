@@ -1,12 +1,36 @@
 const laconia = require("@laconia/core");
-const api = require("@laconia/adapter-api").apigateway({ inputType: "params" });
+const { res } = require("@laconia/event").apigateway;
+const AWS = require('aws-sdk');
 
 const instances = () => ({
-  upperCase: input => input.toUpperCase()
+  getSendHandler: (requestContext) => {
+    const client = new AWS.ApiGatewayManagementApi({
+      apiVersion: '2018-11-29',
+      endpoint: `https://${requestContext.domainName}/${requestContext.stage}`
+    });
+    return async (connection, payload) => client.postToConnection({
+      ConnectionId: connection,
+      Data: JSON.stringify(payload, null, 2)
+    })
+      .promise();
+  }
 });
 
-const app = async ({ value }, { upperCase }) => {
-  return { value: await upperCase(value) };
+const app = async ({ body, requestContext }, { getSendHandler }) => {
+  const send = getSendHandler(requestContext);
+  if (body.answer) await send(requestContext.connectionId, { answer: body.answer });
+  return "success";
 };
 
-exports.handler = laconia(api(app)).register(instances);
+const adapter = app => async (event, context) => {
+  try {
+    const body = JSON.parse(event.body);
+    const output = await app({ ...event, body }, context);
+    return res(output);
+  } catch (err) {
+    console.log(err.message);
+    return res(err.message, 500);
+  }
+};
+
+exports.handler = laconia(adapter(app)).register(instances);
