@@ -1,0 +1,13 @@
+service: laconia-examples-serverless-vanilla
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: ${opt:region, 'eu-west-1'}
+
+functions:
+  uppercase:
+    handler: handler.handler
+    events:
+    - websocket:
+        route: laconia
