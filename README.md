@@ -17,6 +17,7 @@ npx lerna exec -- npm run cloud-test
 - [serverless-vanilla](examples/serverless-vanilla) - Deploy laconia with serverless framework
 - [serverless-babel](examples/serverless-babel) - Deploy laconia in node 6 runtime
 - [serverless-typescript](examples/serverless-typescript) - Use laconia in a TypeScript handler
+- [serverless-websocket](examples/serverless-websocket) - Use laconia with a websocket event
 - [apex](examples/apex) - Deploy laconia with apex
 - [middy](examples/middy) - Integrate middy and laconia
 - [sam](examples/middy) - Deploy laconia with sam
