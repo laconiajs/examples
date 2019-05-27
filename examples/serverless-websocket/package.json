@@ -1,5 +1,5 @@
 {
-  "name": "@laconia-examples/serverless-vanilla",
+  "name": "@laconia-examples/serverless-websocket",
   "version": "0.0.0",
   "private": true,
   "scripts": {
