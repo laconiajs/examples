@@ -8,7 +8,9 @@
     "target": "es2017",
     "outDir": "lib",
     "strict": true,
-    "typeRoots": ["node_modules/@types", "./typings"]
+    "typeRoots": ["node_modules/@types", "./typings"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules"]
 }

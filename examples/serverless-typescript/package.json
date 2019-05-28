@@ -9,7 +9,7 @@
     "cloud-test": "npm run deploy && npm run test && npm run undeploy"
   },
   "dependencies": {
-    "@laconia/core": "^0.16.0"
+    "@laconia/core": "^1.2.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.17",
