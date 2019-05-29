@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "npm run clean:lerna",
     "clean:lerna": "lerna clean --yes || true",
-    "postinstall": "lerna bootstrap"
+    "postinstall": "lerna bootstrap",
+    "test:cloud": "lerna exec -- npm run cloud-test"
   },
   "devDependencies": {
     "@laconia/test": "^0.16.0",

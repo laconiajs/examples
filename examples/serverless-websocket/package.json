@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "../../node_modules/.bin/jest",
+    "test": "../../node_modules/.bin/jest --passWithNoTests",
     "deploy": "../../node_modules/.bin/sls deploy",
     "undeploy": "../../node_modules/.bin/sls remove",
     "cloud-test": "npm run deploy && npm run test && npm run undeploy"

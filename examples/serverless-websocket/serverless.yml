@@ -1,4 +1,4 @@
-service: laconia-examples-serverless-vanilla
+service: laconia-examples-serverless-websocket
 
 provider:
   name: aws
@@ -9,5 +9,5 @@ functions:
   uppercase:
     handler: handler.handler
     events:
-    - websocket:
-        route: laconia
+      - websocket:
+          route: laconia
