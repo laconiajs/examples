@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "../../node_modules/.bin/jest --passWithNoTests",
+    "test": "../../node_modules/.bin/jest",
     "deploy": "../../node_modules/.bin/sls deploy",
     "undeploy": "../../node_modules/.bin/sls remove",
     "cloud-test": "npm run deploy && npm run test && npm run undeploy"
@@ -11,9 +11,10 @@
   "dependencies": {
     "@laconia/core": "^1.0.0",
     "@laconia/event": "^1.0.0",
-    "aws-sdk": "^2.456.0"
+    "aws-sdk": "^2.505.0"
   },
   "devDependencies": {
-    "serverless": "^1.37.1"
+    "serverless": "^1.49.0",
+    "websocket": "^1.0.29"
   }
 }
