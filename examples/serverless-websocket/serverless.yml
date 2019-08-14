@@ -2,12 +2,19 @@ service: laconia-examples-serverless-websocket
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs10.x
   region: ${opt:region, 'eu-west-1'}
 
 functions:
-  uppercase:
-    handler: handler.handler
+  connectionHandler:
+    handler: handler.connect
     events:
       - websocket:
-          route: laconia
+          route: $connect
+      - websocket:
+          route: $disconnect
+
+  defaultHandler:
+    handler: handler.message
+    events:
+      - websocket: $default
