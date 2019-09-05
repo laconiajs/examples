@@ -2,7 +2,7 @@ const request = require("supertest");
 const { getServerlessApiGatewayUrl } = require("./test-helper");
 
 describe("handler", () => {
-  it("should behave as expected", async () => {
+  it("should capitalize the `value` query param", async () => {
     const baseUrl = await getServerlessApiGatewayUrl(
       "dev",
       "laconia-examples-serverless-vanilla"

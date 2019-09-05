@@ -2,7 +2,7 @@ service: laconia-examples-serverless-vanilla
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs10.x
   region: ${opt:region, 'eu-west-1'}
 
 functions:
@@ -10,3 +10,6 @@ functions:
     handler: handler.handler
     events:
       - http: GET uppercase
+
+plugins:
+  - serverless-offline
