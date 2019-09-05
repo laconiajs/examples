@@ -29,5 +29,5 @@ Run:
 ```bash
 ## Optional if you don't want to default eu-west-1
 export AWS_REGION=us-east-1
-npm run test:cloud
+npm run cloud-test
 ```
