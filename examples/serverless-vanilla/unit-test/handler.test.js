@@ -12,14 +12,14 @@ describe("handler", () => {
     const context = {};
 
     handler(event, context, (error, result) => {
-      expect(error).toBe(null)
+      expect(error).toBe(null);
       expect(result).toEqual({
         body: '{"value":" SOMETHING "}',
         statusCode: 200,
         headers: { "Content-Type": "application/json; charset=utf-8" },
         isBase64Encoded: false
       });
-      done()
+      done();
     });
   });
 });
