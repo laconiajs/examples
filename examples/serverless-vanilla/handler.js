@@ -12,6 +12,13 @@ const api = require("@laconia/adapter-api").apigateway({
     ]
   ])
 });
+
+/**
+ * See the following Github issues:
+ * https://github.com/laconiajs/laconia/issues/48
+ * https://github.com/laconiajs/laconia/pull/265
+ *
+ */
 const callbackConverter = require("./src/callback-converter");
 const { FiveOhThreeError, ValidationError } = require("./src/errors");
 
