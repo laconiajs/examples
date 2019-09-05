@@ -6,10 +6,19 @@ provider:
   region: ${opt:region, env:AWS_REGION, 'eu-west-1'}
 
 functions:
+  # Using LaconiaJS
   uppercase:
     handler: handler.handler
     events:
       - http: GET uppercase
+      - http: GET uppercase/{value}
+
+  # Using no framework
+  comparisonUppercase:
+    handler: comparison_handler.handler
+    events:
+      - http: GET comparison/uppercase
+      - http: GET comparison/uppercase/{value}
 
 plugins:
   - serverless-offline

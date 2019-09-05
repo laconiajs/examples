@@ -7,7 +7,7 @@
  * See the following Github issues:
  * https://github.com/laconiajs/laconia/issues/48
  * https://github.com/laconiajs/laconia/pull/265
- * 
+ *
  * @param {laconia.LaconiaHandler} laconiaHandler
  */
 module.exports = laconiaHandler => (event, context) =>
