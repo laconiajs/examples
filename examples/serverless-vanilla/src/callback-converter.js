@@ -8,7 +8,9 @@
  */
 module.exports = laconiaHandler => (event, context) =>
   new Promise((resolve, reject) =>
-    laconiaHandler(event, context, (error, result) =>
-      error ? reject(error) : resolve(result)
+    laconiaHandler(
+      event,
+      context,
+      (error, result) => (error ? reject(error) : resolve(result))
     )
   );

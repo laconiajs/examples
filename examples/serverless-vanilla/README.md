@@ -22,10 +22,12 @@ Simply run:
 npm test
 ```
 
-## Example Integration Testing
+## Example Integration Testing (i.e Live deployment)
 For integration testing, we actually deploy the service, so make sure your AWS credentials are set up. After the test we remove the service.
 
 Run:
 ```bash
-npm run test:integration
+## Optional if you don't want to default eu-west-1
+export AWS_REGION=us-east-1
+npm run test:cloud
 ```

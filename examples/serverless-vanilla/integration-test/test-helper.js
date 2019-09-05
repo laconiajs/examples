@@ -4,6 +4,7 @@ const getServerlessApiGatewayUrl = async (
   serverlessStage,
   serverlessServiceName
 ) => {
+  const region = process.env.AWS_REGION || "eu-west-1";
   const apig = new AWS.APIGateway();
   const restApis = await apig.getRestApis().promise();
   const restApiName = `${serverlessStage}-${serverlessServiceName}`;
@@ -13,7 +14,7 @@ const getServerlessApiGatewayUrl = async (
   }
   return `https://${
     restApi.id
-  }.execute-api.eu-west-1.amazonaws.com/${serverlessStage}`;
+  }.execute-api.${region}.amazonaws.com/${serverlessStage}`;
 };
 
 module.exports = { getServerlessApiGatewayUrl };

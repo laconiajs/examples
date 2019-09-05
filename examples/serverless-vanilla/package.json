@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "test": "jest --coverage unit-test/",
-    "test:integration": "npm run deploy && AWS_REGION=eu-west-1 jest integration-test/ && npm run undeploy",
+    "test:integration": "echo \"Make sure sls offline is running\n\" && IS_OFFLINE=true jest integration-test/",
+    "test:cloud": "npm run deploy && jest integration-test/ && npm run logs && npm run undeploy",
     "deploy": "sls deploy",
+    "logs": "sls logs -f uppercase",
     "undeploy": "sls remove"
   },
   "dependencies": {
