@@ -11,8 +11,15 @@ Then in another terminal run:
 ```bash
 curl localhost:3000/uppercase/?value=blah
 ```
+or
+```bash
+curl localhost:3000/comparison/uppercase/blah
+```
 
-As you can see, the query parameter `value` maps to the `{ value }` argument in the `app` function in [handler.js](handler.js#L8). 
+As you can see, the query parameter and the path paramter `value` maps to the `{ value }` argument in the `app` function in [handler.js](handler.js#L29). All this magic works using `@laconia/adapter-api`.
+
+## Comparison with and without LaconiaJS
+You can compare [using Laconia](handler.js) to [not using it](comparison_handler.js). Keep in mind this is a pretty simple example meant to show how things map from the raw Lambda inputs and get processed.
 
 ## Example Unit Testing
 In this example, we use [Jest](https://jestjs.io/).
