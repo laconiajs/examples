@@ -13,37 +13,23 @@ const api = require("@laconia/adapter-api").apigateway({
   ])
 });
 
+const app = require('./src/app')
+const instances = require('./src/uppercase')
+
 /**
+ * Note: You'll notice a warning from Serverless Offline:
+ *
+ *    Serverless: Warning: handler 'uppercase' returned a promise and also uses a callback!
+ *    This is problematic and might cause issues in your lambda.
+ *
  * See the following Github issues:
  * https://github.com/laconiajs/laconia/issues/48
  * https://github.com/laconiajs/laconia/pull/265
  *
  */
-const callbackConverter = require("./src/callback-converter");
-const { FiveOhThreeError, ValidationError } = require("./src/errors");
 
-const instances = () => ({
-  upperCase: input => input.toUpperCase()
+exports.handler = laconia(api(app)).register(instances, {
+  cache: {
+    enabled: !process.env.IS_OFFLINE
+  }
 });
-
-const app = async ({ value }, { upperCase }) => {
-  // You'll see this in the AWS logs
-  console.info("passed input", value);
-  if (!value) {
-    throw new ValidationError("?value= is missing or empty.");
-  }
-
-  if (value === "503error") {
-    throw new FiveOhThreeError();
-  }
-
-  return { value: await upperCase(value) };
-};
-
-exports.handler = callbackConverter(
-  laconia(api(app)).register(instances, {
-    cache: {
-      enabled: !process.env.IS_OFFLINE
-    }
-  })
-);
