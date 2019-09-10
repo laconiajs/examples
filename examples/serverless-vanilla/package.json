@@ -1,18 +1,22 @@
 {
   "name": "@laconia-examples/serverless-vanilla",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
-    "test": "../../node_modules/.bin/jest",
-    "deploy": "../../node_modules/.bin/sls deploy",
-    "undeploy": "../../node_modules/.bin/sls remove",
-    "cloud-test": "npm run deploy && npm run test && npm run undeploy"
+    "test": "jest --coverage unit-test/",
+    "test:integration": "echo \"Make sure sls offline is running\n\" && IS_OFFLINE=true jest integration-test/",
+    "cloud-test": "npm run deploy && jest integration-test/ && npm run logs && npm run undeploy",
+    "deploy": "sls deploy",
+    "logs": "sls logs -f uppercase",
+    "undeploy": "sls remove"
   },
   "dependencies": {
-    "@laconia/adapter-api": "^0.18.0",
-    "@laconia/core": "^0.16.0"
+    "@laconia/adapter-api": "^1.4.0",
+    "@laconia/core": "^1.4.0"
   },
   "devDependencies": {
-    "serverless": "^1.37.1"
+    "aws-sdk": "^2.523.0",
+    "jest": "^24.9.0",
+    "serverless": "^1.51.0",
+    "serverless-offline": "^5.10.1"
   }
 }

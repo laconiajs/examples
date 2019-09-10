@@ -14,7 +14,7 @@ npx lerna exec -- npm run cloud-test
 
 ## Included Examples
 
-- [serverless-vanilla](examples/serverless-vanilla) - Deploy laconia with serverless framework
+- [serverless-vanilla](examples/serverless-vanilla) - Deploy serverless with and without laconia. This example also shows how to set up API Gateway routes and run them locally using the [serverless-offline](https://www.npmjs.com/package/serverless-offline) plugin. Finally, it shows how to match error types for less boilerplate code.
 - [serverless-babel](examples/serverless-babel) - Deploy laconia in node 6 runtime
 - [serverless-typescript](examples/serverless-typescript) - Use laconia in a TypeScript handler
 - [serverless-websocket](examples/serverless-websocket) - Use laconia with a websocket event
